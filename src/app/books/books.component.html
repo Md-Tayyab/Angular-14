@@ -1,0 +1,23 @@
+<h2>Books to Read</h2>
+<!-- <button (click)="handleClick()"  [disabled]="isDisabled">Show Books</button> -->
+<!--here click button calling handle function is event binding-->
+
+<!-- <input type="text" [(ngModel)]="myName"> Two-way Binding -->
+<!-- <div>{{myName}}</div> -->
+
+<!-- <button (click)="isShowing = !isShowing">
+<ng-container *ngIf="!isShowing">Show Books</ng-container>
+<ng-container *ngIf="isShowing">Hide Books</ng-container>
+</button> -->
+
+<ul *ngIf="isShowing">
+    <ng-container *ngFor="let singleBook of books; let i=index">
+    <!-- <app-book (bookEmitter)="addToCart($event)" [book]="singleBook"></app-book> -->
+    <app-book [book]="singleBook"></app-book>
+    </ng-container>
+    <!-- <li> -->
+        <!-- <img src="{{ src1 }}" alt="{{ name1 }}" width="100"> Interpolation {{}} -->
+        <!-- {{ name1 }} by {{ author1 }} -->
+    <!-- </li> -->
+</ul>
+
